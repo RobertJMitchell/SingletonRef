@@ -123,6 +123,7 @@
     <Compile Include="Models\Todo.cs" />
     <Compile Include="Models\TodoCreateVm.cs" />
     <Compile Include="Models\TodoIndexVm.cs" />
+    <Compile Include="Models\TodoUpdateVm.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TodoService.cs" />
   </ItemGroup>

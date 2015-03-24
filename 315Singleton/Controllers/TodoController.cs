@@ -40,5 +40,13 @@ namespace _315Singleton.Controllers
             return RedirectToAction("Index");
         }
 
+        // attribute for UPDATE METHOD
+        public ActionResult Update(int Id) 
+        {
+            TodoUpdateVm UpdateVm - new TodoUpdateVm();
+            UpdateVm.Id
+            return View();
+        }
+
     }
 }
