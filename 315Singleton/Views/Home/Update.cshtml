@@ -1,0 +1,21 @@
+﻿@model _315Singleton.Models.TodoUpdateVm
+@{
+    ViewBag.Title = "Update";
+}
+
+<h2>Update</h2>
+
+<div>
+    @using(Html.BeginForm()){
+        
+                
+        @Html.LabelFor(t => t.Task)</br>
+        @Html.TextBoxFor(t => t.Task)</br>
+        @Html.LabelFor(t => t.IsCompleted)</br>
+        @Html.CheckBoxFor(t => t.IsCompleted)</br>
+        <div>
+            <input type="submit" value="update"  />
+        </div>
+    }
+    
+</div>

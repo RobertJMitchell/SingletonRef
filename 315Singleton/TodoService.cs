@@ -19,7 +19,7 @@ namespace _315Singleton
         private int _seedId;
 
 
-        
+
         // Singleton...
         public static TodoService Instance
         {
@@ -39,7 +39,7 @@ namespace _315Singleton
         {
             _seedId = 1;
             _todos = new List<Todo>();
-            Todo tempTodo = new Todo(){Id = _seedId, IsCompleted=false, Task="add something!"};
+            Todo tempTodo = new Todo() { Id = _seedId, IsCompleted = false, Task = "add something!" };
             _seedId++;
             _todos.Add(tempTodo);
         }
@@ -69,7 +69,11 @@ namespace _315Singleton
             _seedId++;
             return nTodo.Id;
         }
-
+        //Fetch a Todo
+        public Todo FetchATodo(int Id){
+            Todo uTodo = _todos.FirstOrDefault(t => t.Id == Id)
+            return uTodo;
+        }
         // UPDATE/PUT - a specific todo item
         public void UpdateTodo(int id, string task, bool isCompleted)
         {
@@ -83,5 +87,10 @@ namespace _315Singleton
             ///
         }
 
+
+        internal int FetchATodo()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

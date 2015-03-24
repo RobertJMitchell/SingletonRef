@@ -43,10 +43,15 @@ namespace _315Singleton.Controllers
         // attribute for UPDATE METHOD
         public ActionResult Update(int Id) 
         {
-            TodoUpdateVm UpdateVm - new TodoUpdateVm();
-            UpdateVm.Id
-            return View();
+            TodoUpdateVm updateVm = new TodoUpdateVm();
+            Todo itemToUpdate = _service.FetchATodo(Id);
+            updateVm.Id = itemToUpdate.Id;
+            updateVm.Task = itemToUpdate.Task;
+            updateVm.IsCompleted = itemToUpdate.IsCompleted;
+            return View(updateVm);
         }
+        [HttpPost]
+        public ActionResult Update
 
     }
 }
