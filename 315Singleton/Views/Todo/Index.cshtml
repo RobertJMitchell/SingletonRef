@@ -1,0 +1,13 @@
+﻿@model _315Singleton.Models.TodoIndexVm
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>@Model.Greeting</h2>
+
+<div>
+    @foreach (var t in Model.Tasks)
+    {
+        <div>@t.Id, @t.Task, @t.IsCompleted</div>
+    }
+</div>
